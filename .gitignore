@@ -1,5 +1,7 @@
 node_modules/
 lib/**/*.js.map
+lib/types/**/*.js
+lib/types/**/*.map
 lib/tsconfig.tsbuildinfo
 .DS_Store
 Thumbs.db
