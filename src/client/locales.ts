@@ -1,0 +1,62 @@
+/** `chat.navigator` namespace dictionaries (zh is the key-set source of truth). */
+
+/** Simplified Chinese dictionary. */
+export const zh = {
+  'dock.open': '打开对话历史',
+  'dock.close': '关闭对话历史',
+  'dock.title': '对话历史',
+  'history.title': '历史会话',
+  'history.current': '当前',
+  'history.open': '打开这个会话',
+  'history.projectUnknown': '未标记项目',
+  'history.attachmentQuestion': '（附件提问）',
+  'history.resize': '调整历史会话与提问列表的高度',
+  'count': '{total} 条提问',
+  'board.current': '当前',
+  'board.loadOlder': '加载更早提问',
+  'board.loadingOlder': '正在加载…',
+  'empty.noSession': '当前没有活跃会话。',
+  'empty.noMessages': '还没有提问，发一条消息试试。',
+  'item.attachmentOnly': '（附件提问）',
+  'item.noText': '（无文字内容）',
+  'attachment.image': '图片',
+  'attachment.file': '文件',
+  'preview.attachments': '附件',
+  'preview.status.running': '正在回复…',
+  'preview.status.completed': '本轮已结束',
+  'preview.status.interrupted': '被迫中断',
+  'preview.status.userStopped': '主动停止',
+  'jump.hint': '点击跳转到该条消息',
+} satisfies Record<string, string>
+
+/** The navigator namespace key union. */
+export type NavigatorKey = keyof typeof zh
+
+/** English dictionary, checked complete against the zh key set. */
+export const en = {
+  'dock.open': 'Open chat history',
+  'dock.close': 'Close chat history',
+  'dock.title': 'Chat history',
+  'history.title': 'Previous sessions',
+  'history.current': 'current',
+  'history.open': 'Open this session',
+  'history.projectUnknown': 'Unassigned project',
+  'history.attachmentQuestion': '(attachment question)',
+  'history.resize': 'Resize the session and question panels',
+  'count': '{total} questions',
+  'board.current': 'current',
+  'board.loadOlder': 'Load earlier questions',
+  'board.loadingOlder': 'Loading…',
+  'empty.noSession': 'No active session.',
+  'empty.noMessages': 'No questions yet — send a message to start.',
+  'item.attachmentOnly': '(attachment-only question)',
+  'item.noText': '(no text content)',
+  'attachment.image': 'image',
+  'attachment.file': 'file',
+  'preview.attachments': 'Attachments',
+  'preview.status.running': 'Replying…',
+  'preview.status.completed': 'Turn ended',
+  'preview.status.interrupted': 'Interrupted',
+  'preview.status.userStopped': 'Stopped by user',
+  'jump.hint': 'Click to jump to this message',
+} satisfies Record<NavigatorKey, string>

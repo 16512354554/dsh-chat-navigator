@@ -1,0 +1,9 @@
+# dsh-chat-navigator bundle patch
+#
+# Mounts the chat history navigator as a web plugin row. The plugin's client
+# half is browser-only; this row declares the dsh.client package the profile
+# boot scans into the __DSH_BOOT__ graph, and the loader serves the built
+# bundle at /plugins/dsh-chat-navigator/client.js.
+- insert:
+    - id: chat-navigator
+      name: dsh-chat-navigator

@@ -1,0 +1,77 @@
+{
+  "name": "dsh-chat-navigator",
+  "version": "0.1.0",
+  "description": "A right-edge DSH Web navigator for current-session questions, hover previews, and exact click-to-jump navigation.",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./invariant": {
+      "types": "./lib/types/invariant.d.ts",
+      "default": "./lib/invariant.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-locale"
+      ],
+      "platform": "web"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/16512354554/dsh-chat-navigator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/16512354554/dsh-chat-navigator/issues"
+  },
+  "homepage": "https://github.com/16512354554/dsh-chat-navigator#readme",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "chat",
+    "navigator",
+    "ui"
+  ],
+  "author": "16512354554",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.0 <5.0.0",
+    "@deepseek-ai/dsh-client-locale": ">=0.1.0-rc.1 <0.1.1-0 || >=0.1.1-rc.1 <0.2.0-0",
+    "@deepseek-ai/dsh-client-runtime": ">=0.1.0-rc.1 <0.1.1-0 || >=0.1.1-rc.1 <0.2.0-0",
+    "@deepseek-ai/dsh-client-ui-layout": ">=0.1.0-rc.1 <0.1.1-0 || >=0.1.1-rc.1 <0.2.0-0",
+    "@deepseek-ai/dsh-client-ui-slots": ">=0.1.0-rc.1 <0.1.1-0 || >=0.1.1-rc.1 <0.2.0-0",
+    "@deepseek-ai/dsh-invariants": ">=0.1.0-rc.1 <0.1.1-0 || >=0.1.1-rc.1 <0.2.0-0"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/invariant.js",
+    "lib/client.js",
+    "lib/types/**/*.d.ts",
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ]
+}
